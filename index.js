@@ -1,6 +1,5 @@
 const {
-    WAConnection: 
-    _WAConnection,
+    WAConnection: _WAConnection,
     MessageType,
     Presence,
     Mimetype,
