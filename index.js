@@ -134,7 +134,7 @@ const starts = async (kurr = new WAConnection()) => {
 	kurr.logger.level = 'warn'
 	kurr.version = [2, 2140, 12]
 	console.log(color(`\x1b[1;37m> ${tampilUcapan}\n`,'cyan'))
-	console.log(color(figlet.textSync('ZxAgungBot Assistan', {
+	console.log(color(figlet.textSync('KurzBotz Assistan', {
 		font: 'Standard',
 		horizontalLayout: 'default',
 		vertivalLayout: 'default',
@@ -301,7 +301,9 @@ kurr.on('group-participants-update', async (anu) => {
 
 				teks = `🌹 Hi @${num.split('@')[0]} 👋\n🌹 Selamat Datang Di Group: ${mdata.subject}\n\n Join Pada Jam: ${time} Waktu Server`
 
-				sendButImage(anu.jid, teks, `ZxAgungBot-Assistan`,
+				sendButImage(anu.jid, teks, `KurzBotz-Assistan`, img,but = [{buttonId:``, 
+
+               buttonText:{displayText: 'WELCOME'},type:1}], options = {contextInfo: {mentionedJid: [num, htod]}})
 
 			} else if (anu.action == 'remove') {
 
@@ -321,7 +323,7 @@ kurr.on('group-participants-update', async (anu) => {
 
 				teks = `Daahh @${num.split('@')[0]}\nSelamat Tinggal Di Group: ${mdata.subject}`
 
-				sendButImage(anu.jid, teks, `ZxAgungBot-Assistan`, img,but = [{buttonId: `Hello World!`, buttonText: {displayText: `SAYONARA !!`}, type: 1}], options = {contextInfo: {mentionedJid: [num, htod]}})
+				sendButImage(anu.jid, teks, `KurzBotz-Assistan`, img,but = [{buttonId: `Hello World!`, buttonText: {displayText: `SAYONARA !!`}, type: 1}], options = {contextInfo: {mentionedJid: [num, htod]}})
 
 			} else if (anu.action == 'promote') {
 
