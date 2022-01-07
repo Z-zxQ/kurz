@@ -11,6 +11,7 @@ TQ TO:
 @ADI
 @KurrXd
 @Finx
+@ZxAgung
 * Note:
 * Kalau Mau Recode/Reupload Kasih Credit
 **/
@@ -1667,9 +1668,6 @@ ${nomor++}.  ${prefix}dadu
 ${nomor++}.  ${prefix}semoji [ _emoji_ ]
 ${nomor++}.  ${prefix}attp [ _teks_ ]
 ${nomor++}.  ${prefix}ttp [ _teks_ ]
-${nomor++}.  ${prefix}ttp2 [ _teks_ ]
-${nomor++}.  ${prefix}ttp3 [ _teks_ ]
-${nomor++}.  ${prefix}ttp4 [ _teks_ ]
 ${nomor++}.  ${prefix}toimg
 ${nomor++}.  ${prefix}tomp3 [ _reply video_ ]
 ${nomor++}.  ${prefix}tomp4 [ _reply sticker gif_ ]
@@ -5165,16 +5163,19 @@ break
             kurr.sendMessage(nomor+'@s.whatsapp.net', org, MessageType.text)   
             reply(`Sukses mengirim chat:\n${org},@${nomor}`)
             break
-				case 'ttp4':  
-				case 'ttp2':  
-				case 'ttp3':  
-				case 'ttp':  
 				case 'attp':
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
 					if (!c) return reply(`Teks Nya Mana Kak?\nContoh :\n${prefix}attp ZxAgung Bot Assistan`)
-					atetepe = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=KurrXd&text=${encodeURIComponent(c)}`)
-					kurr.sendMessage(from, atetepe, sticker, { quoted: mek })
-					break             
+					hhhh = q
+                    anu1 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${hhhh}`)
+                    kurr.sendMessage(from, anu1, sticker, {quoted: mek})
+					break
+					if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
+					if (!c) return reply(`Teks Nya Mana Kak?\nContoh :\n${prefix}ttp ZxAgung Bot Assistan`)
+                ttp = args.join(' ')
+                    anu1 = await getBuffer(`https://api.xteam.xyz/ttp?file&text=${ttp}`)
+                    kurr.sendMessage(from, anu1, image, {quoted: mek, caption : '.stikerin'})
+                    break
 				case 'semoji':
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
 			if (args === 0) return reply('emojinya?')   
@@ -6414,6 +6415,7 @@ Giliran = @${tty.player1.split('@')[0]}`
 /**
 * Thx To:
 KurrXd
+ZxAgung
 Dcode Denpa
 Yuzzu Kamiyaka
 **/
